@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="bubble-container">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+    <header>
+        <h1>🎂 Happy Birthday, Angelica! 🎉</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#timeline">Timeline</a></li>
+            <li><a href="#messages">Messages</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="home">
+            <h2>Welcome 💖</h2>
+            <p>This is a special website just for you! Here you'll find some of our favorite memories, messages, and more. I hope you enjoy it! 😊</p>
+        </section>
+        <section id="gallery">
+            <h2>Photo Gallery 📸</h2>
+            <div class="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/photo1.png.jpg" alt="Photo 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/photo2.png.jpg" alt="Photo 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/photo3.png.jpg" alt="Photo 3">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/photo4.png.jpg" alt="Photo 4">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/photo5.png.jpg" alt="Photo 5">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/photo6.png.jpg" alt="Photo 6">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/photo7.png.jpg" alt="Photo 7">
+                    </div>
+                </div>
+                <button class="carousel-control prev" onclick="moveCarousel(-1)">&#10094;</button>
+                <button class="carousel-control next" onclick="moveCarousel(1)">&#10095;</button>
+            </div>
+            <div class="carousel-indicators">
+                <button class="indicator active" onclick="setCarousel(0)"></button>
+                <button class="indicator" onclick="setCarousel(1)"></button>
+                <button class="indicator" onclick="setCarousel(2)"></button>
+                <button class="indicator" onclick="setCarousel(3)"></button>
+                <button class="indicator" onclick="setCarousel(4)"></button>
+                <button class="indicator" onclick="setCarousel(5)"></button>
+                <button class="indicator" onclick="setCarousel(6)"></button>
+            </div>
+        </section>
+        <section id="timeline">
+            <h2>Timeline 🗓️</h2>
+            <div class="timeline">
+                <div class="timeline-event">
+                    <h3>Date</h3>
+                    <p>Description of the event.</p>
+                </div>
+                <div class="timeline-event">
+                    <h3>Date</h3>
+                    <p>Description of the event.</p>
+                </div>
+                <!-- Add more events as needed -->
+            </div>
+        </section>
+        <section id="messages">
+            <h2>Messages 💌</h2>
+            <div class="message">
+                <p>"May your day be filled with love, laughter, and all the happiness in the world. You make every moment brighter just by being you. Here’s to celebrating the amazing person you are today and always."</p>
+                <p>- Roy</p>
+            </div>
+            <div class="message">
+                <p>"Another message here."</p>
+                <p>- Roy</p>
+            </div>
+            <!-- Add more messages as needed -->
+        </section>
+        <section id="contact">
+            <h2>Contact 📧</h2>
+            <form id="contact-form">
+                <label for="message">Send me a message:</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Made with ❤️ by Roy</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
