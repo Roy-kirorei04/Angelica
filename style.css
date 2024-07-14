@@ -4,8 +4,8 @@ body {
     margin: 0;
     padding: 0;
     background: linear-gradient(to right, #ffcccb, #ffe4e1);
-    color: #333;
-    overflow-x: hidden;
+    color: #333; /* Adjust text color for better visibility */
+    overflow-x: hidden; /* Hide horizontal overflow */
 }
 
 header {
@@ -25,7 +25,6 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -49,7 +48,7 @@ nav ul li a:hover {
 
 main {
     padding: 1rem;
-    position: relative;
+    position: relative; /* Ensure relative positioning for bubble container */
 }
 
 section {
@@ -60,7 +59,7 @@ section {
 .carousel {
     position: relative;
     width: 100%;
-    max-width: 100%;
+    max-width: 600px;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -76,8 +75,7 @@ section {
 
 .carousel-item img {
     width: 100%;
-    height: auto;
-    max-height: 400px; /* Adjusted for mobile */
+    height: 500px;
     object-fit: cover;
 }
 
@@ -177,8 +175,8 @@ footer {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    pointer-events: none;
-    z-index: 1;
+    pointer-events: none; /* Ensure bubbles do not interfere with content */
+    z-index: 1; /* Ensure bubbles appear on top of content */
 }
 
 @keyframes bubble {
@@ -200,26 +198,86 @@ footer {
     bottom: 0;
     width: 40px;
     height: 40px;
-    background-color: rgba(255, 182, 193, 0.3);
+    background-color: rgba(255, 182, 193, 0.3); /* Adjust transparency */
     border-radius: 50%;
     animation: bubble 10s infinite;
-    pointer-events: none;
+    pointer-events: none; /* Ensure bubbles do not interfere with content */
 }
 
-.bubble:nth-child(1) { width: 40px; height: 40px; left: 10%; animation-duration: 12s; }
-.bubble:nth-child(2) { width: 30px; height: 30px; left: 20%; animation-duration: 15s; }
-.bubble:nth-child(3) { width: 50px; height: 50px; left: 25%; animation-duration: 10s; animation-delay: 3s; }
-.bubble:nth-child(4) { width: 25px; height: 25px; left: 75%; animation-duration: 15s; animation-delay: 6s; }
-.bubble:nth-child(5) { width: 15px; height: 15px; left: 40%; animation-duration: 9s; animation-delay: 3s; }
-.bubble:nth-child(6) { width: 35px; height: 35px; left: 60%; animation-duration: 14s; animation-delay: 5s; }
-.bubble:nth-child(7) { width: 10px; height: 10px; left: 20%; animation-duration: 11s; animation-delay: 1s; }
-.bubble:nth-child(8) { width: 45px; height: 45px; left: 80%; animation-duration: 13s; animation-delay: 4s; }
-.bubble:nth-child(9) { width: 40px; height: 40px; left: 90%; animation-duration: 8s; animation-delay: 2s; }
+.bubble:nth-child(1) {
+    width: 40px;
+    height: 40px;
+    left: 10%;
+    animation-duration: 12s;
+}
+
+.bubble:nth-child(2) {
+    width: 30px;
+    height: 30px;
+    left: 20%;
+    animation-duration: 15s;
+}
+
+.bubble:nth-child(3) {
+    width: 50px;
+    height: 50px;
+    left: 25%;
+    animation-duration: 10s;
+    animation-delay: 3s;
+}
+
+.bubble:nth-child(4) {
+    width: 25px;
+    height: 25px;
+    left: 75%;
+    animation-duration: 15s;
+    animation-delay: 6s;
+}
+
+.bubble:nth-child(5) {
+    width: 15px;
+    height: 15px;
+    left: 40%;
+    animation-duration: 9s;
+    animation-delay: 3s;
+}
+
+.bubble:nth-child(6) {
+    width: 35px;
+    height: 35px;
+    left: 60%;
+    animation-duration: 14s;
+    animation-delay: 5s;
+}
+
+.bubble:nth-child(7) {
+    width: 10px;
+    height: 10px;
+    left: 20%;
+    animation-duration: 11s;
+    animation-delay: 1s;
+}
+
+.bubble:nth-child(8) {
+    width: 45px;
+    height: 45px;
+    left: 80%;
+    animation-duration: 13s;
+    animation-delay: 4s;
+}
+
+.bubble:nth-child(9) {
+    width: 40px;
+    height: 40px;
+    left: 90%;
+    animation-duration: 8s;
+    animation-delay: 2s;
+}
 
 /* Media Queries */
 @media (max-width: 768px) {
     header {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     nav ul {
@@ -237,8 +295,7 @@ footer {
     }
 
     .carousel-item img {
-        height: auto;
-        max-height: 300px; /* Further adjusted for smaller screens */
+        height: 300px; /* Adjust height for smaller screens */
     }
 
     .photo-gallery {
@@ -270,8 +327,7 @@ footer {
     }
 
     .carousel-item img {
-        height: auto;
-        max-height: 200px; /* Further adjusted for very small screens */
+        height: 200px; /* Further adjust height for very small screens */
     }
 
     .message {
