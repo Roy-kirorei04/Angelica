@@ -56,56 +56,54 @@ section {
 }
 
 /* Carousel Styles */
-.carousel-inner .carousel-item {
-    height: 500px;
+.carousel {
+    position: relative;
+    text-align: center;
 }
 
-.carousel-inner .carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Bubble Styles */
-.bubble-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+.carousel-inner {
     overflow: hidden;
-    pointer-events: none;
 }
 
-.bubble {
+.carousel-item {
+    display: none; /* Hide all items by default */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    max-height: 500px; /* Adjust height as needed */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
     position: absolute;
-    bottom: 0;
-    width: 40px;
-    height: 40px;
-    background-color: rgba(255, 105, 180, 0.8);
-    border-radius: 50%;
-    animation: bubble 10s infinite;
-    pointer-events: none;
-    box-shadow: 0 0 10px rgba(255, 182, 193, 0.5);
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 105, 180, 0.7);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
 }
 
-.bubble:nth-child(1) { width: 40px; height: 40px; left: 10%; animation-duration: 12s; }
-.bubble:nth-child(2) { width: 30px; height: 30px; left: 20%; animation-duration: 15s; }
-.bubble:nth-child(3) { width: 50px; height: 50px; left: 25%; animation-duration: 10s; animation-delay: 3s; }
-.bubble:nth-child(4) { width: 25px; height: 25px; left: 75%; animation-duration: 15s; animation-delay: 6s; }
-.bubble:nth-child(5) { width: 15px; height: 15px; left: 40%; animation-duration: 9s; animation-delay: 3s; }
-.bubble:nth-child(6) { width: 35px; height: 35px; left: 60%; animation-duration: 14s; animation-delay: 5s; }
-.bubble:nth-child(7) { width: 10px; height: 10px; left: 20%; animation-duration: 11s; animation-delay: 1s; }
-.bubble:nth-child(8) { width: 45px; height: 45px; left: 80%; animation-duration: 13s; animation-delay: 4s; }
-.bubble:nth-child(9) { width: 40px; height: 40px; left: 90%; animation-duration: 8s; animation-delay: 2s; }
-
-@keyframes bubble {
-    0% { transform: translateY(100vh); opacity: 0; }
-    50% { opacity: 1; }
-    100% { transform: translateY(-10%); opacity: 0; }
+.carousel-control-prev {
+    left: 10px;
 }
 
-/* Timeline Styles */
+.carousel-control-next {
+    right: 10px;
+}
+
+/* Other Sections */
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
 .timeline {
     border-left: 2px solid #ff69b4;
     padding-left: 1rem;
@@ -128,7 +126,6 @@ section {
     border-radius: 50%;
 }
 
-/* Message Styles */
 .message {
     background-color: #fff;
     padding: 1rem;
@@ -138,7 +135,6 @@ section {
     font-family: 'Pacifico', cursive;
 }
 
-/* Footer Styles */
 footer {
     background-color: #ff69b4;
     color: white;
@@ -150,12 +146,44 @@ footer {
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Bubble Styles */
+.bubble-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.bubble {
+    position: absolute;
+    bottom: 0;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 182, 193, 0.7);
+    border-radius: 50%;
+    animation: bubble 10s infinite;
+    pointer-events: none;
+}
+
+@keyframes bubble {
+    0% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-10%);
+        opacity: 0;
+    }
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
-    body {
-        font-size: 14px;
-    }
-
     header {
         font-size: 2rem;
     }
@@ -165,13 +193,22 @@ footer {
         padding: 0.5rem;
     }
 
+    main {
+        padding: 0.5rem;
+    }
+
+    .carousel-item img {
+        max-height: 300px; /* Adjust height for mobile */
+    }
+
+    footer {
+        padding: 0.5rem;
+    }
+
     .bubble {
         width: 30px;
         height: 30px;
     }
-
-    .bubble:nth-child(1), .bubble:nth-child(3) { width: 35px; height: 35px; }
-    .bubble:nth-child(4), .bubble:nth-child(8) { width: 25px; height: 25px; }
 }
 
 @media (max-width: 480px) {
@@ -185,7 +222,7 @@ footer {
     }
 
     .bubble {
-        width: 25px;
-        height: 25px;
+        width: 20px;
+        height: 20px;
     }
 }
